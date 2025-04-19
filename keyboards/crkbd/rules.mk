@@ -1,0 +1,26 @@
+DEFAULT_FOLDER = crkbd/ironlungx
+
+BOOTLOADER = rp2040
+BOARD = GENERIC_RP_RP2040
+CONVERT_TO=helios
+
+MOUSEKEY_ENABLE = yes
+
+OLED_ENABLE = yes
+OLED_DRIVER = ssd1306
+OLED_TRANSPORT = i2c
+
+LTO_ENABLE = yes
+
+LAYER_LOCK_ENABLE = yes
+
+WPM_ENABLE = yes
+
+RGBLIGHT_ENABLE = no
+
+SRC += ./keymaps/ironlungx/bongo/bongo_cat.c
+
+PROGRAMMABLE_BUTTON_ENABLE = yes
+DYNAMIC_MACRO_ENABLE = yes
+
+UNICODE_ENABLE = yes
