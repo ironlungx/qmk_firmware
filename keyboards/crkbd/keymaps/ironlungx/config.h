@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define TAPPING_TERM 100
 
 // Tapping term: The max time (in ms) to register a key as a tap
-#define TAPPING_TERM 200
+#define TAPPING_TERM 185
 
 // #define MK_KINETIC_SPEED
 
