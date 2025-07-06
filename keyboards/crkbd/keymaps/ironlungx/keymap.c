@@ -1,8 +1,3 @@
-#include "action_layer.h"
-#include "oled_driver.h"
-#include "quantum_keycodes.h"
-#include "string.h"
-#include "modifiers.h"
 #include QMK_KEYBOARD_H
 
 #define HMR_A LGUI_T(KC_A)
@@ -19,33 +14,12 @@
 
 enum layers { ALPHA_HMR, ALPHA,  NUM, SYM, FUNC, TTY_SWITCH, MOUSE };
 
-static const unsigned char PROGMEM image_GameMode_bits[] = {0x04,0x00,0x7f,0xc0,0xdf,0xe0,0x8e,0xa0,0xdf,0xe0,0xf1,0xe0,0xe0,0xe0,0xc0,0x60};
-
 #ifdef OLED_ENABLE
-void oled_draw_xbm(uint8_t x, uint8_t y, uint8_t width, uint8_t height, const uint8_t *bitmap) {
-  uint8_t byteWidth = (width + 7) / 8; // Width in bytes
-
-  for (uint8_t j = 0; j < height; j++) {
-    for (uint8_t i = 0; i < width; i++) {
-      // Calculate byte position and bit position within that byte
-      uint8_t byte_index = j * byteWidth + (i / 8);
-      uint8_t bit_position = i % 8;
-
-      // Check if the bit is set in the bitmap
-      bool pixel = bitmap[byte_index] & (1 << bit_position);
-
-      if (pixel) {
-        oled_write_pixel(x + i, y + j, true);
-      }
-    }
-  }
-}
 
 bool oled_task_user(void) {
-    // Clear the display for a clean slate
     oled_clear();
 
-    // Get current layer and display with appropriate icon/text
+    /* Get current layer and display with appropriate text */
     oled_set_cursor(0, 0);
     switch (get_highest_layer(layer_state)) {
         case ALPHA_HMR:
@@ -98,6 +72,7 @@ bool oled_task_user(void) {
 
     return false;
 }
+
 void oled_render_boot(bool bootloader) {
   oled_clear();
 
@@ -107,7 +82,6 @@ void oled_render_boot(bool bootloader) {
   oled_render_dirty(true);
 }
 
-// Show a message when in download mode
 bool shutdown_user(bool jump_to_bootloader) {
   oled_render_boot(jump_to_bootloader);
   return true;

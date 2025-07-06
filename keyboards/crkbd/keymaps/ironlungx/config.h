@@ -26,21 +26,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 
 #define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
 
-// #define QUICK_TAP_TERM 20
-// #define TAPPING_TERM 100
-
-// Tapping term: The max time (in ms) to register a key as a tap
+/* Tapping term: The max time (in ms) to register a key as a tap */
 #define TAPPING_TERM 185
-
-// #define MK_KINETIC_SPEED
-
-// #define MOUSEKEY_DELAY          0
-// #define MOUSEKEY_INTERVAL       7 // from 4 to 7
-// #define MOUSEKEY_MAX_SPEED      2 // from 1 to 3
-// #define MOUSEKEY_TIME_TO_MAX    32
 
 #undef MOUSEKEY_DELAY
 #undef MOUSEKEY_INTERVAL
@@ -54,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_MAX_SPEED      6
 #define MOUSEKEY_TIME_TO_MAX    64
 
-// Enables prioritizing hold if another key is pressed within the tapping term
+/* Enables prioritizing hold if another key is pressed within the tapping term */
 #define PERMISSIVE_HOLD
 
 
