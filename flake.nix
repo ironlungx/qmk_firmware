@@ -10,8 +10,8 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        keyboard = "moonlander";
-        keymap = "ryan";
+        keyboard = "crkbd";
+        keymap = "ironlungx";
         target = "${keyboard}:${keymap}";
       in
       {
