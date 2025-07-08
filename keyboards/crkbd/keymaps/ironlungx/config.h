@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 
 /* Tapping term: The max time (in ms) to register a key as a tap */
-#define TAPPING_TERM 185
+#define TAPPING_TERM 170
 
 #undef MOUSEKEY_DELAY
 #undef MOUSEKEY_INTERVAL
