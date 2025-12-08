@@ -19,3 +19,5 @@ WPM_ENABLE = yes
 RGBLIGHT_ENABLE = no
 
 REPEAT_KEY_ENABLE = yes
+
+SRC += keymaps/ironlungx/bongo/bongo_cat.c

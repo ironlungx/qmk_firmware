@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "bongo/bongo_cat.h"
 
 #define HMR_A LGUI_T(KC_A)
 #define HMR_S LALT_T(KC_S)
@@ -17,7 +18,9 @@ enum layers { ALPHA_HMR, ALPHA,  NUM, SYM, FUNC, TTY_SWITCH, MOUSE };
 #ifdef OLED_ENABLE
 
 bool oled_task_user(void) {
-    oled_clear();
+    render_bongo_cat();
+
+    #if 0
 
     /* Get current layer and display with appropriate text */
     oled_set_cursor(0, 0);
@@ -69,6 +72,7 @@ bool oled_task_user(void) {
 
     oled_set_cursor(0, 1);
     oled_write(mods, false);
+#endif
 
     return false;
 }
@@ -91,13 +95,13 @@ bool shutdown_user(bool jump_to_bootloader) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [ALPHA_HMR] = LAYOUT_split_3x6_3(
-//    ┌───────────┬───────┬───────┬───────┬────────┬─────────┐                   ┌─────────┬───────┬───────┬───────┬──────────┬────┐
-//    │    tab    │   q   │   w   │   e   │   r    │    t    │                   │    y    │   u   │   i   │   o   │    p     │ no │
-//    ├───────────┼───────┼───────┼───────┼────────┼─────────┤                   ├─────────┼───────┼───────┼───────┼──────────┼────┤
-//    │    esc    │ win/a │ alt/s │ sft/d │ ctl/f  │    g    │                   │    h    │ ctl/j │ sft/k │ alt/l │ alt/sCLN │ '  │
-//    ├───────────┼───────┼───────┼───────┼────────┼─────────┤                   ├─────────┼───────┼───────┼───────┼──────────┼────┤
-//    │ MO(MOUSE) │   z   │   x   │   c   │   v    │    b    │                   │    n    │   m   │   ,   │   .   │    /     │ no │
-//    └───────────┴───────┴───────┴───────┼────────┼─────────┼─────┐       ┌─────┼─────────┼───────┼───────┴───────┴──────────┴────┘
+//    ┌───────────┬───────┬───────┬───────┬────────┬─────────┐                   ┌─────────┬───────┬───────┬───────┬───────┬────┐
+//    │    tab    │   q   │   w   │   e   │   r    │    t    │                   │    y    │   u   │   i   │   o   │   p   │ no │
+//    ├───────────┼───────┼───────┼───────┼────────┼─────────┤                   ├─────────┼───────┼───────┼───────┼───────┼────┤
+//    │    esc    │ win/a │ alt/s │ sft/d │ ctl/f  │    g    │                   │    h    │ ctl/j │ sft/k │ alt/l │ win/; │ '  │
+//    ├───────────┼───────┼───────┼───────┼────────┼─────────┤                   ├─────────┼───────┼───────┼───────┼───────┼────┤
+//    │ MO(MOUSE) │   z   │   x   │   c   │   v    │    b    │                   │    n    │   m   │   ,   │   .   │   /   │ no │
+//    └───────────┴───────┴───────┴───────┼────────┼─────────┼─────┐       ┌─────┼─────────┼───────┼───────┴───────┴───────┴────┘
 //                                        │ QK_REP │ MO(NUM) │ spc │       │ ent │ MO(SYM) │ bspc  │
 //                                        └────────┴─────────┴─────┘       └─────┴─────────┴───────┘
   KC_TAB    , KC_Q  , KC_W  , KC_E  , KC_R   , KC_T    ,                           KC_Y    , KC_U    , KC_I    , KC_O   , KC_P     , XXXXXXX,

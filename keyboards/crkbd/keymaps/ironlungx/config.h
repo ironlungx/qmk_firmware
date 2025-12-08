@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 
 /* Tapping term: The max time (in ms) to register a key as a tap */
-#define TAPPING_TERM 170
+#define TAPPING_TERM 175
 
 #undef MOUSEKEY_DELAY
 #undef MOUSEKEY_INTERVAL
@@ -36,14 +36,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef MOUSEKEY_MAX_SPEED
 #undef MOUSEKEY_TIME_TO_MAX
 
-#define MOUSEKEY_DELAY          0
-#define MOUSEKEY_INTERVAL       16
-#define MOUSEKEY_WHEEL_DELAY    0
-#define MOUSEKEY_MAX_SPEED      6
-#define MOUSEKEY_TIME_TO_MAX    64
+#define MOUSEKEY_DELAY 0
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_WHEEL_DELAY 0
+#define MOUSEKEY_MAX_SPEED 6
+#define MOUSEKEY_TIME_TO_MAX 64
 
 /* Enables prioritizing hold if another key is pressed within the tapping term */
 #define PERMISSIVE_HOLD
-
 
 #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
