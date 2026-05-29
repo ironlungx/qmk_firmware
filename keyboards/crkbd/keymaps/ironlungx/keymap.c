@@ -184,12 +184,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ├─────┼──────┼──────┼──────┼──────┼─────────┤                           ├─────────┼─────────┼───────┼─────────┼────┼────┤
 //    │ no  │  no  │  no  │  no  │  no  │   no    │                           │   no    │   no    │  no   │   no    │ no │ no │
 //    └─────┴──────┴──────┴──────┼──────┼─────────┼─────────┐       ┌─────────┼─────────┼─────────┼───────┴─────────┴────┴────┘
-//                               │  no  │ MS_WHLU │ MS_BTN2 │       │ MS_BTN1 │ MS_WHLD │ QK_LLCK │
+//                               │  no  │ MS_WHLU │ MS_BTN1 │       │ MS_BTN2 │ MS_WHLD │ QK_LLCK │
 //                               └──────┴─────────┴─────────┘       └─────────┴─────────┴─────────┘
   XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                             XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
   _______ , KC_LGUI , KC_LALT , KC_LSFT , KC_LCTL , XXXXXXX ,                             MS_LEFT , MS_DOWN , MS_UP   , MS_RGHT , XXXXXXX , XXXXXXX,
   XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                             XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-                                          XXXXXXX , MS_WHLU , MS_BTN2 ,         MS_BTN1 , MS_WHLD , QK_LLCK
+                                          XXXXXXX , MS_WHLU , MS_BTN1 ,         MS_BTN2 , MS_WHLD , QK_LLCK
 ),
 
 [TTY_SWITCH] = LAYOUT_split_3x6_3(
